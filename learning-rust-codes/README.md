@@ -49,8 +49,12 @@ https://doc.rust-lang.org/book/appendix-02-operators.html
 ---
 ---
 
+
+# 1. Getting Started
+
 **00_hello_world**
 ```
 rustc main.rs
 ./main
 ```
+
