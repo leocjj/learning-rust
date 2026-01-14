@@ -71,7 +71,4 @@ sudo apt install wslu
 
 # VS Code extension
 https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
-
-
-
 ```

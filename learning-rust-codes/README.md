@@ -52,9 +52,11 @@ https://doc.rust-lang.org/book/appendix-02-operators.html
 
 # 1. Getting Started
 
-**00_hello_world**
+**00_hello_world/**
 ```
 rustc main.rs
 ./main
 ```
 
+**Cargo**
+Rust’s build system and package manager. Comes installed with Rust.
