@@ -52,11 +52,39 @@ https://doc.rust-lang.org/book/appendix-02-operators.html
 
 # 1. Getting Started
 
-**00_hello_world/**
-```
+## **00_hello_world/**
+```bash
 rustc main.rs
 ./main
 ```
 
-**Cargo**
-Rust’s build system and package manager. Comes installed with Rust.
+## **01_hello_cargo/**
+
+Rust’s build system and package manager. Comes installed with Rust (packages of code are referred to as crates).
+```bash
+cargo --version
+```
+
+### Creating a Project
+
+https://doc.rust-lang.org/cargo/
+
+```bash
+cargo new hello_cargo  # creates a new directory and project
+cd hello_cargo
+  or
+cargo init  # In a folder, this will create a project automatically.
+
+cargo build  # Creates an executable file in target/debug/hello_cargo,
+             # because the default build is a debug build
+./target/debug/hello_cargo  # Runs the executable file.
+
+cargo run  # Compiles the code and then run the executable.
+
+cargo check  # Checks code to make sure it compiles, doesn’t produce an executable
+
+cargo build --release  # Compile with optimizations.
+                       # Creates an executable in target/release
+
+
+```
