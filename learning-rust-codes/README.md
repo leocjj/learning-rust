@@ -93,9 +93,27 @@ cargo build --release  # Compile with optimizations.
 Automatically imports into every Rust program, no need to import them
 https://doc.rust-lang.org/std/prelude/index.html
 e.g.: String, whithout prelude we should do:
-```bash
+```rust
 # No need to do this because Rust has predule
   use std::string;
   let mut guess = string::String::new();
 # Just do this instead
   let mut guess = String::new();
+```
+
+## The :: syntax
+
+In the ::new line indicates that new is an associated function of the String type.
+An associated function is a function that’s implemented on a type, in this case String.
+
+```rust
+# Creats a mutable variable that is currently bound to a new, empty instance of a String
+let mut guess = String::new();
+```
+
+## User Input
+
+```rust
+io::stdin()
+        .read_line(&mut guess)
+```
