@@ -6,6 +6,7 @@ fn main() {
     println!("Please input your guess.");
 
     let mut guess = String::new();
+    let _apples = 5; // immutable
 
     io::stdin()
         .read_line(&mut guess)
