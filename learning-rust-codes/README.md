@@ -103,17 +103,65 @@ e.g.: String, whithout prelude we should do:
 
 ## The :: syntax
 
-In the ::new line indicates that new is an associated function of the String type.
-An associated function is a function that’s implemented on a type, in this case String.
-
-```rust
-# Creats a mutable variable that is currently bound to a new, empty instance of a String
+```bash
+# Variables are immutable by default, to make a variable mutable, we add mut
+# Creates a mutable variable that is currently bound to a new, empty instance of a String
 let mut guess = String::new();
+G
+# Is a string type that is a GROWABLE, UTF-8 encoded bit of text.
+String
+
+# Indicates that 'new' is an associated function of the String type.
+# An associated function is a function that’s implemented on a type, in this case String.
+::new
 ```
+
 
 ## User Input
 
-```rust
-io::stdin()
-        .read_line(&mut guess)
+```bash
+# We can import the io module and use it
+  use std::io;
+  io::stdin().read_line(...
+# or we could still use the function directly by writing this
+  std::io::stdin().read_line(...
+
+# This function returns an instance of std::io::Stdin which is a type
+# that represents a handle to the standard input for your terminal
+stdin()
+
+# Method on the standard input handle to get input from the user
+# take whatever the user types into standard input and append that into a string
+.read_line(...)
+
+# Argument to read_line() to tell it what string to store the user input in
+&mut guess
+
+# It's a method of the returned 'Result' value from read_line(), it's an enumeration (enum)
+# It's a type that can be in one of multiple possible states. 
+# We call each possible state a variant. Result’s variants are Ok and Err.
+# Has an 'expect' method, if Result is an 'Err' value, the program crash and display the message
+# If Result is an Ok value, 'expect' will take the return value that Ok is holding and return
+# just that value to use it, the value is the number of bytes in the user’s input.
+.expect("Failed to read line");
 ```
+
+## &
+```bash
+# & indicates that this argument is a reference
+# Let multiple parts of the code access one piece of data without needing to copy it.
+# Like variables, references are immutable by default.
+# Need '&mut guess' rather than &guess to make it mutable.
+&mut guess
+```
+
+## Dependencies
+From Crates.io, to Cargo.toml file
+```bash
+[dependencies]
+rand = "0.8.5"  # Means ^0.8.5, this is, at least 0.8.5 but below 0.9.0
+```
+
+
+
+
