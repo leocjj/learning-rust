@@ -58,7 +58,7 @@ rustc main.rs
 ./main
 ```
 
-## **01_hello_cargo/**
+## **hello_cargo/**
 
 Rust’s build system and package manager. Comes installed with Rust (packages of code are referred to as crates).
 ```bash
@@ -85,6 +85,17 @@ cargo check  # Checks code to make sure it compiles, doesn’t produce an execut
 
 cargo build --release  # Compile with optimizations.
                        # Creates an executable in target/release
-
-
 ```
+
+# 2. Programming a Guessing Game
+
+## Prelude
+Automatically imports into every Rust program, no need to import them
+https://doc.rust-lang.org/std/prelude/index.html
+e.g.: String, whithout prelude we should do:
+```bash
+# No need to do this because Rust has predule
+  use std::string;
+  let mut guess = string::String::new();
+# Just do this instead
+  let mut guess = String::new();
