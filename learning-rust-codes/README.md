@@ -162,6 +162,26 @@ From Crates.io, to Cargo.toml file
 rand = "0.8.5"  # Means ^0.8.5, this is, at least 0.8.5 but below 0.9.0
 ```
 
+## Cargo.lock
 
+- 'cargo build' creates the Cargo.lock file the first time, next time,
+- 'cargo build' will use Cargo.lock file rather than figure it out versions again.
+- Commit this file into source control with the rest of the code.
+- This is a reproducible build. The project will remain at 0.8.5 until explicitly upgraded.
 
+- To update a crate use 'cargo update', this ignores the Cargo.lock file and figure out
+  all the latest versions that fit your specifications in Cargo.toml.
+- Cargo will then write those versions to the Cargo.lock file.
 
+# Cargo commands:
+    new         Create a new cargo package
+    init        Create a new cargo package in an existing directory
+
+    build, b    Compile the current package
+    run, r      Run a binary or example of the local package
+    check, c    Analyze the current package and report errors, but don't build object files
+
+    add         Add dependencies to a manifest file,        e.g. cargo add rand@=0.8.5
+    remove      Remove dependencies from a manifest file,   e.g. cargo remove rand
+    update      Update dependencies listed in Cargo.lock,
+    tree        Display a tree visualization of a dependency graph
