@@ -1,8 +1,8 @@
 # learning-rust path
 
 - https://doc.rust-lang.org/book/
-1. Getting Started
-2. Programming a Guessing Game
+1. ✅ Getting Started
+2. 🔄 Programming a Guessing Game
 3. Common Programming Concepts
 ---
 4. Understanding Ownership
