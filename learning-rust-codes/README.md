@@ -173,7 +173,7 @@ rand = "0.8.5"  # Means ^0.8.5, this is, at least 0.8.5 but below 0.9.0
   all the latest versions that fit your specifications in Cargo.toml.
 - Cargo will then write those versions to the Cargo.lock file.
 
-# Cargo commands:
+## Cargo commands:
     new         Create a new cargo package
     init        Create a new cargo package in an existing directory
 
@@ -185,3 +185,22 @@ rand = "0.8.5"  # Means ^0.8.5, this is, at least 0.8.5 but below 0.9.0
     remove      Remove dependencies from a manifest file,   e.g. cargo remove rand
     update      Update dependencies listed in Cargo.lock,
     tree        Display a tree visualization of a dependency graph
+
+## Traits
+
+The Rng trait defines methods that random number generators implement
+```bash
+# This trait must be in scope to use its methods.
+rand::Rng;
+
+let secret_number = rand::thread_rng().gen_range(1..=100);
+
+# Function that gives random number generator, local to the current thread, is seeded by OS.
+rand::thread_rng
+
+# Method on the random number generator, defined by the Rng trait.
+gen_range 
+
+# Range expression inclusive on the lower and upper bounds
+start..=end  # e.g. 1..=100
+```
