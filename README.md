@@ -1,9 +1,10 @@
 # learning-rust path
 
-- https://doc.rust-lang.org/book/
+## Follow the book
+https://doc.rust-lang.org/book/
 1. ✅ Getting Started
-2. 🔄 Programming a Guessing Game
-3. Common Programming Concepts
+2. ✅ Programming a Guessing Game
+3. 🔄 Common Programming Concepts
 ---
 4. Understanding Ownership
 5. Using Structs to Structure Related Data
@@ -31,27 +32,49 @@
 ---
 21. Final Project: Building a Multithreaded Web Server
 ---
+
+## Test knowledge with examples
 - https://doc.rust-lang.org/rust-by-example/
+
 - https://leetcode.com/
----
+
+## Learn basic useful libraries
+
 - https://tokio.rs/
 - https://github.com/clap-rs/clap
 - https://github.com/serde-rs/serde
----
+- https://github.com/kreuzberg-dev/kreuzberg/
+
+## Create basic projects
+- Simple UI
 - Todo App
+- Build an API
 - Integrate and API
 - CLI App with DB support
-- Build an API
-- Simple UI
 - Read code of a public library framework
----
-- Personal project
-- CLI tool
+
+## Create portfolio based on:
+- Relevance:
+    - High-performance CLI tool
+    - High-performance microservices
+    - Web3/blockchain applications/analysis
+    - Crypto trading tools
+    - Ultra-optimized embedded systems
+- Substance:
+    - Clean
+    - Modular
+    - Troughtfully architected
+- Initial ideas (develop 2 or 3):
+    - Open Source contributions
+        - https://github.com/orgs/astral-sh/repositories
+    
+
 
 ---
 ---
 
-## Installation
+
+# Installation
 
 https://doc.rust-lang.org/book/ch01-01-installation.html
 
