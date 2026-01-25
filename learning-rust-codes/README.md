@@ -9,7 +9,7 @@ The following is a list of keywords currently in use, with their functionality d
 - **continue**: Continue to the next loop iteration.
 - **crate**: In a module path, refers to the crate root.
 - **dyn**: Dynamic dispatch to a trait object.
--else**: Fallback for if and if let control flow constructs.
+- **else**: Fallback for if and if let control flow constructs.
 - **enum**: Define an enumeration.
 - **extern**: Link an external function or variable.
 - **false**: Boolean false literal.
@@ -92,9 +92,9 @@ cargo build --release  # Compile with optimizations.
 ## Prelude
 Automatically imports into every Rust program, no need to import them
 https://doc.rust-lang.org/std/prelude/index.html
-e.g.: String, whithout prelude we should do:
-```rust
-# No need to do this because Rust has predule
+e.g.: String, without prelude we should do:
+```bash
+# No need to do this because Rust has prelude
   use std::string;
   let mut guess = string::String::new();
 # Just do this instead
@@ -107,11 +107,11 @@ e.g.: String, whithout prelude we should do:
 # Variables are immutable by default, to make a variable mutable, we add mut
 # Creates a mutable variable that is currently bound to a new, empty instance of a String
 let mut guess = String::new();
-G
+
 # Is a string type that is a GROWABLE, UTF-8 encoded bit of text.
 String
 
-# Indicates that 'new' is an associated function of the String type.
+# :: indicates that 'new' is an associated function of the String type.
 # An associated function is a function that’s implemented on a type, in this case String.
 ::new
 ```
@@ -121,18 +121,18 @@ String
 
 ```bash
 # We can import the io module and use it
-  use std::io;
-  io::stdin().read_line(...
+use std::io;
+io::stdin().read_line(&mut guess);
 # or we could still use the function directly by writing this
-  std::io::stdin().read_line(...
+std::io::stdin().read_line(&mut guess).expect("Failed to read line");
 
 # This function returns an instance of std::io::Stdin which is a type
-# that represents a handle to the standard input for your terminal
+# that represents a handler to the standard input for your terminal
 stdin()
 
 # Method on the standard input handle to get input from the user
 # take whatever the user types into standard input and append that into a string
-.read_line(...)
+.read_line(&mut guess);
 
 # Argument to read_line() to tell it what string to store the user input in
 &mut guess
@@ -159,6 +159,7 @@ stdin()
 From Crates.io, to Cargo.toml file
 ```bash
 [dependencies]
+# Use caret ^, tilde ~, or comparison operators >=, =
 rand = "0.8.5"  # Means ^0.8.5, this is, at least 0.8.5 but below 0.9.0
 ```
 
@@ -186,6 +187,8 @@ rand = "0.8.5"  # Means ^0.8.5, this is, at least 0.8.5 but below 0.9.0
     update      Update dependencies listed in Cargo.lock,
     tree        Display a tree visualization of a dependency graph
 
+    doc --open  Build documentation locally for all dependencies and open it in browser
+
 ## Traits
 
 The Rng trait defines methods that random number generators implement
@@ -204,3 +207,34 @@ gen_range
 # Range expression inclusive on the lower and upper bounds
 start..=end  # e.g. 1..=100
 ```
+
+## Result type
+```bash
+# OPTION 1:
+# parse() method returns a Result type -> use expect() to handle it.
+# If parse returns an Err Result variant
+#   expect() call will crash the game and print the message we give it.
+# If parse return the Ok Result variant
+#   expect() will return the number from the Ok value.
+let guess: u32 = guess.trim().parse().expect("Please type a number!");
+```
+
+```bash
+# OPTION 2:
+# Handle potential parse errors using a match expression without crashing
+let guess: u32 = match guess.trim().parse() {
+    Ok(num) => num,
+    Err(_) => {
+        println!("Please type a valid number!");
+        continue;
+    }
+};
+```
+
+
+
+
+
+
+
+
