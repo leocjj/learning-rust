@@ -231,6 +231,61 @@ let guess: u32 = match guess.trim().parse() {
 };
 ```
 
+# 3. Common Programming Concepts
+
+## Variables and Mutability
+
+By default, variables are immutable
+
+### Constants
+  Use the *const* keyword, and the type of the value must be annotated.
+  const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+
+  - They’re always immutable.
+  - Can be declared in any scope, including the global scope (variables don't).
+  - Are valid for the entire time a program runs, within the scope in which they were declared.
+  - May be set only to a constant expression, not the result of a value that could only be computed at runtime.
+
+### Shadowing
+
+  Reuse the same variable name even with different types, second overshadows the first
+    let spaces = "   ";
+    let spaces = spaces.len();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
