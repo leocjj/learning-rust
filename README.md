@@ -36,14 +36,26 @@ https://doc.rust-lang.org/book/
 ## Test knowledge with examples
 - https://doc.rust-lang.org/rust-by-example/
 
+- https://rustlings.rust-lang.org/
+
+- https://exercism.org/tracks/rust (easy category)
+
 - https://leetcode.com/
+
+- https://adventofcode.com/
 
 ## Learn basic useful libraries
 
 - https://tokio.rs/
+- https://github.com/yewstack/yew
+- https://github.com/rwf2/Rocket/tree/v0.5.1
+- https://github.com/launchbadge/sqlx
 - https://github.com/clap-rs/clap
 - https://github.com/serde-rs/serde
 - https://github.com/kreuzberg-dev/kreuzberg/
+- https://github.com/actix/actix
+- https://docs.rs/polars/latest/polars/ (Dataframes)
+- https://github.com/mstange/samply (Profiler)
 
 ## Create basic projects
 - Simple UI
@@ -67,7 +79,61 @@ https://doc.rust-lang.org/book/
 - Initial ideas (develop 2 or 3):
     - Open Source contributions
         - https://github.com/orgs/astral-sh/repositories
+
+## Check Rust use cases and roadmap
+
+https://product.letsgetrusty.com/
+
+### Use cases
+- Systems Programming
+    - Databases, OS
+    - Security, encryption
+    - Data processing
+    - IoT / embedded devices
+- Tool / Infrastructure
+    - CLI apps
+    - Platform code
+    - Shared code (libraries)
+    - Build & deply (CI/CD)
+- Web
+    - Backend
+        - APIs
+        - Distributed Systems
+        - Microservices
+    - Frontend
+        - WebAssembly
+- Emerging technologies
+    - AR/VR
+    - Blockchain
+
+### The roadmap
+- Prerequisites
+    - CS fundamentals (stack, heap, pointers, etc.)
+    - Memory management fundamentals
+    - Programming languages fundamentals (e.g. types)
+- The Rust language
+    - Primities, variables and control flow
+    - Memory safety with ownership & borrowing
+    - Type system (option, result, structs, enums)
+    - How to structure Rust projects
+    - How to test and document code
+    - Polymorphism with generics & traits.
+    - Lifetimes & smart pointers
+    - Underdanding error handling
+    - Functional features
+    - Concurrency & async/.await
+    - The macro system
+    - Unsafe Rust & FFI
     
+## Next steps
+
+- https://github.com/ctjhoa/rust-learning
+- https://exercism.org/tracks/rust (medium and hard)
+- https://rust-cli.github.io/book/index.html
+- https://rust-embedded.org/
+- https://docs.rust-embedded.org/book
+- https://rustwasm.github.io/docs/book/
+- https://github.com/wasm-bindgen/wasm-bindgen
 
 
 ---
