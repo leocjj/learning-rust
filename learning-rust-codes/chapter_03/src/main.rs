@@ -1,4 +1,5 @@
 const GLOBAL_VARIABLE: i32 = 10; // Global variable
+                                 // let PI: f32 = 3.141598  // `let` cannot be used for global variables
 
 fn main() {
     // Variables and Mutability
@@ -23,4 +24,18 @@ fn main() {
         println!("The value of x in the inner scope is: {x}");
     }
     println!("The value of x is: {x}");
+
+    let guess: u32 = "42".parse().expect("Not a number!");
+    println!("The value of guess is: {guess}");
+
+    // Primary scalar types:
+    // integers, floating-point numbers, Booleans, and characters.
+    let num1 = 43u16; // 16-bit unsigned integer
+    let num2 = 3.14f64; // 64-bit floating-point number
+    let is_active = true; // Boolean
+    let letter = 'A'; // Character
+    println!("The value of num1 is: {num1}");
+    println!("The value of num2 is: {num2}");
+    println!("The value of is_active is: {is_active}");
+    println!("The value of letter is: {letter}");
 }
