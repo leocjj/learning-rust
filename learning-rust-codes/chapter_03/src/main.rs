@@ -23,4 +23,8 @@ fn main() {
         println!("The value of x in the inner scope is: {x}");
     }
     println!("The value of x is: {x}");
+
+    let guess: u32 = "42".parse().expect("Not a number!");
+    println!("The value of guess is: {guess}");
+
 }
