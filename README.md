@@ -5,6 +5,11 @@ https://doc.rust-lang.org/book/
 1. ✅ Getting Started
 2. ✅ Programming a Guessing Game
 3. 🔄 Common Programming Concepts
+    1. ✅ Variables and Mutability
+    2. ✅ Data types
+    3. 🔄 Functions
+    4. Comments
+    5. Control flow
 ---
 4. Understanding Ownership
 5. Using Structs to Structure Related Data
