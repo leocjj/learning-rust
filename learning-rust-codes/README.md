@@ -249,11 +249,35 @@ By default, variables are immutable
 ### Shadowing
 
   Reuse the same variable name even with different types, second overshadows the first
+
     let spaces = "   ";
     let spaces = spaces.len();
 
+### Types
 
+All variables need a type at compile time. If not obvious, type should be defined:
+```bash
+let guess: u32 = "42a".parse().expect("Not a number!");
+```
 
+Length	  Signed	Unsigned
+8-bit	    i8	    u8
+16-bit	  i16	    u16
+32-bit	  i32	    u32
+64-bit	  i64	    u64
+128-bit 	i128	  u128
+Architecture-dependent	isize	usize
+
+Note that number literals that can be multiple numeric types allow a type suffix, such as 57u8, to designate the type.
+
+let num1 = 43u16;
+
+Number literals	Example
+Decimal	        98_222
+Hex	            0xff
+Octal	          0o77
+Binary	        0b1111_0000
+Byte (u8 only)  b'A'
 
 
 
