@@ -233,7 +233,7 @@ let guess: u32 = match guess.trim().parse() {
 
 # 3. Common Programming Concepts
 
-## Variables and Mutability
+## 3.1 Variables and Mutability
 
 By default, variables are immutable
 
@@ -253,7 +253,9 @@ By default, variables are immutable
     let spaces = "   ";
     let spaces = spaces.len();
 
-### Types
+## 3.2 Data types
+
+Scalar types: integers, floating-point numbers, Booleans, and characters.
 
 All variables need a type at compile time. If not obvious, type should be defined:
 ```bash
@@ -280,6 +282,36 @@ Binary	        0b1111_0000
 Byte (u8 only)  b'A'
 
 
+### **Compound Types**
+
+#### **Tuple**
+
+To group values with a variety of types into one compound type.
+Have a fixed length: Once declared, they cannot grow or shrink in size.
+
+let tup = (500, 6.4, 1);
+let tup: (i32, f64, u8) = (500, 6.4, 1);
+
+// pattern matching to destructure a tuple value
+let (x, y, z) = tup;
+println!("The value of y is: {y}");
+
+The tuple without any values has a special name, unit.
+This value and its corresponding type are both written () and represent an empty value or an empty return type.
+Expressions implicitly return the unit value if they don’t return any other value.
+
+#### **Array**
+
+Every element of an array must have the same type. Have a fixed length.
+
+Arrays are useful when you want your data allocated on the stack,
+the same as the other types we have seen so far, rather than the heap 
+or when you want to ensure that you always have a fixed number of elements.
+
+A vector is a similar collection type provided by the standard library
+that is allowed to grow or shrink in size because its contents live on the heap.
+
+let a = [1, 2, 3, 4, 5];
 
 
 
@@ -300,6 +332,9 @@ Byte (u8 only)  b'A'
 
 
 
+
+
+## 3.3 Functions
 
 
 
