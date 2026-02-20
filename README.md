@@ -76,6 +76,12 @@ https://doc.rust-lang.org/book/
     - Clean
     - Modular
     - Troughtfully architected
+- Including:
+    - Real db, queue, metrics, logging, kafka
+    - Data processing pipeline that must not drop events
+    - Highhroughput component that sits between services
+    - Deployable with Docker and CI without drama
+    - Model errors so other services know what happened
 - Initial ideas (develop 2 or 3):
     - Open Source contributions
         - https://github.com/orgs/astral-sh/repositories
