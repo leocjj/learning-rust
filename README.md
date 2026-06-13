@@ -172,3 +172,42 @@ sudo apt install wslu
 # VS Code extension
 https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
 ```
+
+
+---
+---
+
+
+# Others
+
+    https://www.youtube.com/@letsgetrusty
+    
+    https://www.linkedin.com/groups/4973032/
+    https://www.linkedin.com/company/rustjobs-dev/
+    https://www.linkedin.com/products/rustjobs-dev-hire-rust-engineers/
+
+    Get connected with the right people
+        Get connected with Rust recruiters
+        Build relationships with developers
+        Position yourself properly
+
+    Implementing Microsoft’s Rust Guidelines for AI Coding Agents
+        https://microsoft.github.io/rust-guidelines/
+            https://rust-lang.github.io/api-guidelines/checklist.html
+        # Download the agent-optimized guidelines
+        curl -o ~/rust-guidelines.txt https://microsoft.github.io/rust-guidelines/agents/all.txt
+
+        prompt$ Check the code against the guidelines in ~/rust-guidelines.txt
+
+        GitHub Copilot in VS Code:
+            Create a .copilot-instructions.md file in your project root:
+                # Rust Coding Guidelines
+                Please follow the Microsoft Pragmatic Rust Guidelines when generating code.
+                The complete guidelines are available in ~/rust-guidelines.txt.
+                Key areas to focus on:
+                - Error handling patterns using Result<T, E>
+                - API design for scalability
+                - Performance-conscious implementations
+                - Idiomatic Rust patterns
+
+    https://github.com/rust-lang/rust-analyzer
